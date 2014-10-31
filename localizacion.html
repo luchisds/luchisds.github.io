@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="SUEÑOS - Somos Wellness, somos salud, educación y actividad física" />
+	<title>SUEÑOS - Somos Wellness, somos salud, educación y actividad física</title>
+
+	<!--[if (lt IE 9)|(IE 9)]>
+		<script src=""media/js/html5shiv.min.js"></script>
+		<link rel="stylesheet" href="media/css/styles_ie9.css">
+	<![endif]-->
+
+	<link rel="stylesheet" href="media/css/normalize.css">
+	<link rel="stylesheet" href="media/css/styles.css">
+
+	<script src="media/js/jquery-1.11.1.min.js"></script>
+	<script src="media/js/velocity.min.js"></script>
+	<script src="media/js/velocity.ui.js"></script>
+	<script src="media/js/js.js"></script>
+</head>
+<body class="localizacion">
+	<div id="layout">
+		<header>
+			<h1 id="logo"><img src="media/img/logo_solo.png" alt="SUEÑOS"></h1><!--
+			--><div id="upline"><h2>* LOCALIZACIÓN</h2></div><!--
+			--><span id="slogan">Somos wellnes, somos salud, educación y actividad física.</span>
+		</header>
+		<nav class="primary_nav">
+			<ul>
+				<li><span class="button"></span><a href="index.html">home</a></li>
+				<li><span class="button"></span><a href="nosotros.html">nosotros</a></li>
+				<li><span class="button"></span><a href="staff.html">staff</a></li>
+				<li><span class="button"></span><a href="plenitud.html">programas</a></li>
+				<li><span class="button"></span><a href="contacto.html">contacto</a></li>
+			</ul>
+		</nav>
+		<div class="greenshape"></div>
+		<!--[if (lt IE 9)|(IE 9)]>
+			<img class="semicirculo_ie" src="media/img/semicirculo_ie9.png" alt="">
+		<![endif]-->
+		<!--[if (IE 10)|(IE 11)|!IE]><!--><img class="semicirculo" src="media/img/semicirculo3.png" alt=""><!--<![endif]-->
+		<section class="content">
+			<div id="map_container"><div id="map"></div></div><!--
+			--><div>
+				<p><span class="bold">Sueños</span>, calle Jujuy 902</p>
+				<p>ciudad de Arrecifes (CP 2740)</p><p class="break">Provincia de Buenos Aires.</p>
+				<p class="bold break">Las rutas de acceso son:</p>
+				<p>- desde Capital Ruta 8</p>
+				<p class="break">(distancia: 180 km  aproximadamente).</p>
+				<p>- desde Rosario (Pcia. de Santa Fé)</p>
+				<p>Ruta 9 hasta acceso a Ruta Prov. 51</p>
+				<p class="break">(distancia: 177 km aproximadamente).</p>
+				<p>Sueños se encuentra dentro de un predio de 10 hectáreas; el casco principal y diferentes áreas funcionales <span class="bold">(camping, recreación, campo de deportes, pileta, vestuarios).</span></p>
+				<p>Dentro del casco central funcionan áreas como: Consultorios, Gabinete de Masoterápia, Estética Corporal, Dormis, Sala de Estar para lectura con TV, Administración, Sauna, Pileta Terapéutica Climatizada (magnetoterápia, ozonoterápia, sales), Gimnasio, Taverna con parrillero y horno de barro, Baños principales y duchas.</p>
+				<p>Pero nuestro espacio no termina en los limites del predio, las actividades se realizan también en lugares próximos como orillas del Rio Arrecifes, Ruinas de Tajamar y el viejo molino.</p>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div>
+			<a class="footer_fb" href="https://www.facebook.com/suenioswellness"><img src="media/img/fb.png" alt="Visitá nuestra fan page!"><span class="hf">Hacéte fan!</span></a>
+		</div><!--
+		--><div>
+			<p><span style="font-weight: bold;">Sueños Wellnes</span>. Jujuy 902, Arrecifes, Bs. As.</p>
+			<p>Todos los derechos reservados.</p>
+		</div>
+		<div class="credits" style="right: 9em;">
+			<img src="media/img/logo_ariana.png" alt="Ariana Barbosa">
+		</div>
+		<div class="credits" style="right: 1em;">
+			<a href="http://www.chocolatestudio.com.ar"><span class="cs">C</span>hocolate <span class="cs">S</span>tudio</a>
+		</div>
+	</footer>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script>
+		var map = L.map('map', {zoomControl: false}).setView([-34.0521, -60.1124], 13);
+
+		L.control.zoom({position:'topright'}).addTo(map);
+
+		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>'/*,
+			id: 'examples.map-i875mjb7'*/
+		}).addTo(map);
+
+		var popupOptions =
+		{
+			'closeButton': false
+		}
+
+		L.marker([-34.05749, -60.12359]).addTo(map).bindPopup("<b>Estamos aquí!", popupOptions).openPopup();;
+	</script>
+	
+</body>
+</html>
